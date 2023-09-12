@@ -31,12 +31,26 @@ body {
   width: 25%;
   padding-left: 20px;
 }
+.button {
+  background-color: #e9be5a;
+  width: 20%;
+  height: 50px;
+  border-radius: 9px;
+  padding: 2px;
+  text-align: center;
+}
 
 /* Fake image */
 .fakeimg {
-  background-color: #faebd7;
-  width: 100%;
-  padding: 20px;
+  background-color: #e7ac21;
+  max-width: 100%;
+  padding: 10px;
+}
+.fakeimg img {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9px;
 }
 .fakeimg2 {
   background-color: #faebd7;
