@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Optima', sans-serif;
+  padding: 20px;
+  color:#faebd7;
+  background: #8FBC8F;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: #2F4F4F;
+  border-radius: 9px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+.button {
+  background-color: #8FBC8F;
+  width: 20%;
+  height: 50px;
+  border-radius: 9px;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #2F4F4F;
+  max-width: 100%;
+  padding: 10px;
+}
+.fakeimg img {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9px;
+}
+.fakeimg2 {
+  background-color: #faebd7;
+  width: 50%;
+  padding: 5px;
+}
+.fakeimg2 img {
+  width: 100%;
+  border-radius: 9px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #2F4F4F;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 9px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #e7ac21;
+  margin-top: 20px;
+  border-radius: 9px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}

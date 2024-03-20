@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Seasonal Depression and Hygge</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1072f17f-03e5-4f62-b97d-3b082693936c" class="page sans"><header><h1 class="page-title">Seasonal Depression and Hygge</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Author</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a-/AFdZucpwPeJDiJt8fuq5zJRdJeEpnSE1yRzJI2CBpB-J1Q=s100" class="icon user-icon"/>Jessica Eastman</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><td><time>@January 16, 2020</time></td></tr></tbody></table></header><div class="page-body"><p id="e8ffa2d5-e345-4cfe-96c6-f3dcb97b044d" class="">I have seasonal depression (or <a href="https://www.blogger.com/blog/post/edit/5335996833748801657/4413634698908125244#">seasonal affective disorder</a>). My mood fluctuates drastically based on the weather and the amount of sunlight I am getting. The holidays have been hell for this because of the amount of alone time and lack of structure to my day. During the holidays I was waking up at around 11am (because I stayed up late playing video games). Its winter here in London so I had about 4-5 hours of sunlight left after waking up, which on most days was masked by overcast clouds, typical of London.</p><p id="0ab07d07-8271-4b1a-a74a-521e56ea4cdc" class="">Now, if I had been doing yoga or exercise in this time, I would have felt a lot better, but it was the holidays and I couldn’t bring myself to do anything that required effort and it was hard enough to get out of bed in the first place. The idea of going back to work and being an adult again seemed foreign and impossible to me. But I couldn’t wait for the return to normal habits and the return of social activity.</p><p id="8643ff57-5571-4f35-a849-bb1f5d74406c" class="">Things are getting back to normal and are a little better but there are steps I took along the way as well to make life more enjoyable.  It’s important to take care of yourself in the winter time. And I’m learning that the countries in the north are good at this. I have visited two countries recently that are great at dealing with the sad seasons pretty well: Germany and Denmark. If you’re in the position where you can’t be arsed to go to the gym or leaving the house is too much effort, there is still ways in which you can make life a little more joyful.</p><p id="4271e49c-4005-4da8-ac90-848a5e7bafa8" class=""><strong>German Christmas markets and Gluhwein</strong></p><p id="3be55906-7d11-413c-a716-c36315b6dd8a" class="">The Germans have the most festival winter traditions ever: they have Christmas markets around this time every year. Having been to at least 4 different Christmas markets in Germany I can safely say this brings a lot of happiness with it. If I stayed in Germany and just went from Christmas market to Christmas market I think I would have been a lot happier. At the Christmas markets in Germany you can find hundreds of people enjoying Bratwurst and Gluhwein (also called Mulled wine) and strudel and pretzel. You can also find lots of stalls selling handmade items: scarfs and gloves and star lamps and wooden toys. Theres also music and people having a good time. If you can drink gluhwein all day and eat good food surrounded by people, you can enjoy the dark winter days.</p><p id="84245446-9a20-44fd-adc7-57766392bdf1" class="">But you don’t need to go to the markets for this feeling. And the Danish are great at brining this cosy, festive feeling into the house. With Hygge.</p><p id="5ea9ca1c-73f7-44e7-b5fd-e38d395a46fd" class=""><strong>Making things easier with a little Hygge</strong></p><p id="5767d016-9778-4916-87de-d475bfe27ada" class="">After visiting Denmark in September, I’ve learnt all about Hygge. There are books on Hygge (I have one on my bookshelf). The nordic countries are the happiest countries in the world and there are quite a few reasons for that. The Danes know how to make the atmosphere and environment around them cosy and comfortable and this contributes to happiness, this is what Hygge is all about. What can you do to make your life a little more Hygge-like?</p><ul id="3da9be73-352c-4baf-841f-910597b2380b" class="bulleted-list"><li style="list-style-type:disc">Candles, lots of candles and warm lighting. The Danes love candles and I love candles. As an artist and a visual person I have an appreciation for warm lighting. It makes everything look a little more aesthetic.</li></ul><ul id="86c9bb2c-c2e9-49de-b5f9-c968c99dc6d1" class="bulleted-list"><li style="list-style-type:disc">Keep the house warm and cosy with blankets and cushions. These are great to just curl up in with a good book.</li></ul><ul id="a476aef5-f79d-447e-8801-c134ab72f860" class="bulleted-list"><li style="list-style-type:disc">Gluhwein and other hot spiced drinks. Gluhwein is my preferred night time drink but I also like to make my own hot spiced chai milk. The secret to spiced drinks is always the ginger, cloves, nutmeg and cinnamon.</li></ul><ul id="548c9936-452e-4b8e-8f6e-0340352678bc" class="bulleted-list"><li style="list-style-type:disc">Chill music in the background. I like to put on medieval and Celtic folk music as well as bard songs from video games.</li></ul><ul id="1061994e-373a-4ef2-8bf4-ee9212c2ac6d" class="bulleted-list"><li style="list-style-type:disc">Good company with friends and chill music and candles. Having people around you to share the Hygge with is an important part of the Hygge. If you can, spend time with people you are comfortable with and enjoy spending time with. I spent Christmas Day and New Years eve with friends I enjoy spending time with and it made those days special and joyful.</li></ul><ul id="9366de73-9fe4-4387-b15e-8e2cc49e8698" class="bulleted-list"><li style="list-style-type:disc">Cosy warm foods to go with the gluhwein, and baking. Danes love pastries, and there’s a good reason for it, they’re delicious.</li></ul><ul id="ef46fea6-2a96-4192-8b3d-156e01026a63" class="bulleted-list"><li style="list-style-type:disc">A good book to read, cuddled up on the couch. Reading is one of my favourite past times, a good book can teleport you out of any real world problems into a fantasy realm. At the moment I’m reading the Last Wish by <em>Andrzej Sapkowski</em>.</li></ul><p id="728512a9-ac7b-4ee5-841d-0edffeb54dfc" class=""><strong>Journaling to get the feelings out of your head and onto a page</strong></p><p id="f3bb9ff7-861e-486c-9763-f66b157043ab" class="">A good practice for mindfulness is the habit of journaling or morning pages. This is where you spend some time getting out all the thoughts in your head on a page so that they won’t worry you later in the day and you can think clearly. Its also a good idea for tracking how you are feeling and a way to analyse your emotions.</p><p id="56663841-8fc6-4cb5-8910-77846145d0be" class="">I’ve been writing in a journal since I moved to London. I’ve filled up three notebooks with my thoughts and feelings. It might not seem like it will help but if you struggle to communicate how you feel to people, then taking a moment to write it down can be really beneficial. Nobody has to see it but you. It can clear all the worries from your brain so that you can focus on the things that actually need to be done.</p><p id="e88c4e1c-cf6a-44de-a808-a7a3769dcc43" class="">I also have a daily to do list in my journal so I don’t have to worry about forgetting things that I need to do. And writing it down instead of putting it in my google calendar helps me to remember.</p><p id="9e5aaf97-0a1a-409c-bbb9-127f591277c2" class=""><strong>Exercise is the best thing for the brain</strong></p><p id="291ef662-1527-4514-bae6-c1ac01506e93" class="">The other thing that helps but requires a lot more effort and so can seem impossible to do in your worst moments is a bit of exercise. Its amazing how much just going for a walk can help to stave off the sadness. And jogging does amazing things to the brain as well. Whenever I have found myself feeling down and blue but have had the energy to make myself get to the gym and go jogging on the treadmill, I have found all the blue thoughts slip away and its as if my brain has been reset. For the next few hours after the exercise, its impossible to feel down at all. And I’m left wondering why it took me so long to get to the gym in the first place. But it feels impossible to do before hand and that’s the barrier that most of us get stuck at.</p><p id="ad20dd37-0bc2-48a3-b5e6-b95d3a5bb5c4" class="">For the first gym session back of the year I required a lot of incentive to go. I took myself out for a treat at a cafe and took the whole day slow, waiting for the moment when I could pull myself to the gym. I wrote this in my journal for the day:</p><p id="ec0a4202-511a-4558-bf80-27a38b51f445" class=""><strong>Saturday 4/1/20</strong></p><p id="6a5caab2-8319-423b-aa07-04c7b52b1307" class="">I actually went to the gym today. First time back for the year. First time in a month. My face is red and itchy from my sweat but I feel good. I wanted to make it a good workout since it’s been a while. I listened to a podcast for the entire time, fully zoned out of everything around me, focusing solely on my body, pulling and pushing.</p><p id="1a958065-6e49-471d-8332-a8850e5f35aa" class="">I think today was a good day. I slept in a bit so I told my sister we should do yoga later tonight. I wanted to talk to my dad on video chat because it had been a while and we had scheduled to talk. The sun was out from behind the clouds when I ended the call so I had a shower and got ready to leave the house, determined not to be cooped up again.  I took my laptop and notebook and set of gym clothes with me so I had plenty of options. I walked in the direction of my gym. I also decided that I really wanted to reward myself for leaving the house with coffee and a pastry.</p><p id="4c2f0cde-40ba-4241-b194-146039d8586c" class="">I went to cafe that  I had never been in but always wanted to try out. It was busy inside. Too busy for my anxious self. And too warm. My glasses fogged up and I had a small panic from not being able to see clearly. I put my glasses on top of my head and looked at the pastries. I would get take away, it would all be ok. I ordered my coffee. An almond milk latte along with a raisin scroll. I usually don’t order pastries because I know my gut doesn’t enjoy wheat but one pastry isn’t so bad every now and then and its a treat after all. I don’t feel guilty. I’d only eaten a banana for breakfast and by this point it was 2pm. For some reason I find it hard to feed myself like a normal adult when I have no schedule. There was plenty of seating outside so I decided I would sit down and eat my scroll in peace. With a sweater and puffy jacket on I wasn’t cold. The fresh air was delightful and I could sit and watch the traffic going past as I ate my treat.</p><p id="513dfb42-69e1-4eb0-84a8-801597b1c48f" class="">Fuelled by my tasty snack I went for a walk through the park. The sun was shining through the clouds briefly and it was lovely. Finally I had the motivation to go to the gym. It was easier when I got inside and I remembered how to do it. After wards I had a mango smoothie, really making sure to treat my positive healthy behaviour for the day. Then I had a salad for dinner and did yoga with my sister. The healthy choices of the day helped to make me feel like a healthy version of myself.</p><p id="97f7f742-d171-45fa-acc2-e4849a59adbd" class="">Winter can be a hard time for people, especially when you’re living in a different country to your family and friends. It can be lonely and dark. Its hard to share your depression with others when you’re in it. When you’re stuck in the thick clouds of sadness with no visible way out and you don’t have the motivation to do much at all besides stay in bed and shut out the world. It can be completely debilitating. Even when you’re surrounded by friends, depression can make you feel like you’re alone. But you’re not alone, and if you reach out for help, someone will be there to take your hand. The hardest step is reaching out, it gets easier after that.</p><p id="8420e4b8-1c80-4cd5-81a6-ded2e81f5340" class=""><strong>My recipe for Gluhwein:</strong><strong></strong></p><p id="f5bae264-f8f3-4810-817d-394f5102eb4b" class="">Ingredients:</p><ul id="135d776e-8f77-4abb-bf2a-5b589edcfdff" class="bulleted-list"><li style="list-style-type:disc">1 orange cut into slices with the skin on</li></ul><ul id="cc9f2e3a-f7ab-4f19-85e6-36ac76858f45" class="bulleted-list"><li style="list-style-type:disc">Peel from 1 lemon</li></ul><ul id="f01a4783-bf22-42ec-9e29-5d4721dd7945" class="bulleted-list"><li style="list-style-type:disc">Peel from 1 lime</li></ul><ul id="816b6e5d-8565-4f4d-90c9-90fe77e48eaf" class="bulleted-list"><li style="list-style-type:disc">1 Cinnamon stick</li></ul><ul id="07b8da46-034b-490b-ad9f-17efc8695202" class="bulleted-list"><li style="list-style-type:disc">1/4 tsp Ginger</li></ul><ul id="5233040b-3fe5-4072-a7cd-1e18354b3774" class="bulleted-list"><li style="list-style-type:disc">5 cloves</li></ul><ul id="04263c04-1b4a-4fa0-9128-f1e15d79796b" class="bulleted-list"><li style="list-style-type:disc">1/4 tsp Nutmeg</li></ul><ul id="f9610489-bbe1-4938-ac25-563538a69dce" class="bulleted-list"><li style="list-style-type:disc">70g brown sugar (add more for a sweeter drink)</li></ul><ul id="ac0417b3-6736-4b26-aa8c-5c8b6bfd320b" class="bulleted-list"><li style="list-style-type:disc">1 bottle red wine</li></ul><ul id="d20661e1-d5ce-4242-b092-839dc6ccbcd1" class="bulleted-list"><li style="list-style-type:disc"><em>Optional</em> 1 cup of port</li></ul><p id="30be5a1b-1294-4fd5-a0e2-2201ef2cbf47" class="">Directions: </p><ul id="67265bf5-ad2d-48d5-a672-fe4432b53aa5" class="bulleted-list"><li style="list-style-type:disc">Put all the spices and citrus in a large pot. Put the port and 1 cup of the red wine in as well and turn on the heat and stir.</li></ul><ul id="28ed4671-c2e4-4707-8fae-224ba16a46e4" class="bulleted-list"><li style="list-style-type:disc">Heat it to the point just before it boils then pour the rest of the red wine in.</li></ul><ul id="d33f408a-d923-4dc4-a544-c8b05253b9ff" class="bulleted-list"><li style="list-style-type:disc">Heat again until just before boiling.</li></ul><ul id="5ab05d96-a8ca-4241-8542-f49cb99f2ed8" class="bulleted-list"><li style="list-style-type:disc">Serve in your favourite mug.</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

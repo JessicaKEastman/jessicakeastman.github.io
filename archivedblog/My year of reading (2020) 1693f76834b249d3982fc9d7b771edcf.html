@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>My year of reading (2020)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1693f768-34b2-49d3-982f-c9d7b771edcf" class="page sans"><header><h1 class="page-title">My year of reading (2020)</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Author</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a-/AFdZucpwPeJDiJt8fuq5zJRdJeEpnSE1yRzJI2CBpB-J1Q=s100" class="icon user-icon"/>Jessica Eastman</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><td><time>@January 2, 2021</time></td></tr></tbody></table></header><div class="page-body"><p id="a496e450-4f7c-4777-8a5c-59a46666f38b" class="">Hello my dear friends, how are you? Happy new year. Let’s not talk about the year we left behind. I mean we could, its good to reflect on it. But let’s not do it here. This is a place of positivity and focusing on the things that bring us joy.</p><p id="37093f60-c050-4762-b4a9-9b366e743e8f" class="">I thought I would write a blog as a way of sending off the year and welcoming the new year. I  want to express my deep love for having books in my life this year. I’m going to do it by going through the books I’ve read and making a list of the top books. I haven’t written any blogs during the craziness that has been the past 10 months, so here’s to making positive changes and getting back to life outside of lockdown blues. I’m starting with the book list I’ve read because, unlike my writing, this is something where I’ve actually finished something. So I actually feel like I accomplished something even as this year was stopping me from finishing anything else (I have many many projects at the moment that are somewhere in the middle space of being started and being finished).</p><p id="9be3d48f-7802-4754-8882-c000aa70ba9a" class="">So let’s start by looking at the books I read this year by the month I finished them.</p><p id="91fcc598-98da-4643-a16c-967bd059ac13" class=""><strong>January</strong></p><p id="a42d7fc3-ff2a-44f1-bb00-db3e63e8cabc" class="">Odd girl out - Laura James</p><p id="55220a17-bb1a-4f3e-abac-0fcc418f63ab" class="">The sorrows of an American - Siri Hustvedt</p><p id="dfc8908d-c9ab-46d3-a128-10dfa6e4b0af" class="">The Rosie project - Graeme Simsion</p><p id="3932016d-f01c-42ab-8ac7-5ac291d6cf2b" class=""><strong>February</strong></p><p id="607d40c2-60aa-4a45-b64d-8d094a53f9d3" class="">How to argue with a racist - Adam Rutherford (I picked up this book after attending a talk from the author, which I used to do a lot before the world turned upside down, oh those were the days)</p><p id="1df4eb7a-7783-431b-a873-a78c9d5dcefd" class=""><strong>March</strong></p><p id="c5179e70-bb42-46d8-8ab8-7a905c90b30e" class="">A woman looking at men looking at women - Siri Hustvedt</p><p id="b2396da3-e9a7-49a4-a602-794f6b931a97" class="">How to fail - Elizabeth Day</p><p id="94d30314-1465-43d9-8112-bd1cbce3bdd5" class="">The last wish - Andrej Sapkowski</p><p id="2a90ce60-7dc6-40ad-a02a-7ba4213a7560" class="">Rushing woman syndrome - Dr Libby Weaver</p><p id="8fef2cae-b705-4bdf-8855-b20091c7ae50" class=""><strong>April</strong></p><p id="9c948592-4d3a-4ee3-aa68-dcbd52af3561" class="">Persepolis Rising - James S A Corey</p><p id="105bdf14-d317-4f35-ae23-3f219b9dd542" class="">Tiamat’s wrath - James S A Corey</p><p id="9086f102-4b67-47b7-969d-52e14c59d7a2" class=""><strong>May</strong></p><p id="8c40b150-5701-44b1-a7dc-769d1aabbebf" class="">What I loved - Siri Hustvedt</p><p id="dcf6dfef-faaf-41e0-9944-b26e6d3bbd4b" class="">Confessions of a crap artist - Phillip K Dick</p><p id="9f493881-13e7-407e-b946-ae4e2d06911c" class="">Man alone with himself - Frederich Nietzsche</p><p id="e1686d5d-2cae-4bb7-b33f-3ac1a4e8f3c4" class="">Normal people - Sally Rooney</p><p id="0b02a61b-dd18-4b24-b6aa-f049f378658d" class=""><strong>June</strong></p><p id="d1ea7934-6f9b-4f4f-9a41-3cb6ce506a28" class="">The long way to a small angry planet - Becky Chambers</p><p id="e2907ac6-fc5b-4ff0-812a-277d857d1527" class="">Annihilation - Jeff Vandermeer</p><p id="621e2631-3261-433e-ae31-46da2cd24364" class="">Lovecraft country - Matt Ruff</p><p id="02d29487-4bf2-4ec0-96fc-dfe4f2d4a0ba" class="">Girl, Woman, Other - Bernadine Evaristo</p><p id="8b7b8692-c6a8-4933-891f-c6008c754ece" class="">A closed and common orbit - Becky Chambers</p><p id="932f1ebd-27f1-4fc3-85da-55d59f5870dd" class=""><strong>July</strong></p><p id="6a955899-9159-4581-90d0-5ec80d56cd06" class="">Call me by your name - Andre Aciman</p><p id="a4b70260-1784-48c2-b94d-3d100f839906" class="">Authority - Jeff Vandermeer</p><p id="1c90777b-7e70-4cac-891b-12dcbdaf5673" class="">Ikigai the Japanese secret to a happy long life - Hector Garcia and Francesc Miralles</p><p id="987e4bd0-245c-4070-8133-e9c89a1e7839" class="">And still I rise - Maya Angelou</p><p id="6596a9ee-5dcc-4973-ae00-bde7e1cff731" class="">Record of a spacebar few - Becky Chambers</p><p id="a64bcaf1-602a-48dc-b195-dde3a7c4befa" class=""><strong>August</strong></p><p id="e838ee88-ea3b-44fe-b5fa-cdca64664adc" class="">Acceptance - Jeff Vandermeer</p><p id="ca78194b-9cae-4fff-b307-abc1d4aa636a" class="">Thinking in pictures - Temple Grandin</p><p id="733e3450-07e8-4c3a-aa23-e230e7a56652" class=""><strong>September</strong></p><p id="37bff347-dec3-48f0-852f-4283340e0ee2" class="">Talking to strangers - Malcolm Gladwell</p><p id="d321f202-285a-4188-b2ad-964f6d0676a6" class="">An artist of the floating world - Kazuo Ishiguro</p><p id="f0f16cc8-7f2c-41eb-9bbd-0496cbc2c47c" class="">Outliers - Malcolm Gladwell</p><p id="29a8515b-09b5-4f9b-850a-41b6617711bc" class=""><strong>October</strong></p><p id="7a319ffd-a3f8-48b4-82c5-e02a4a79f36b" class="">Dune - Frank Herbert</p><p id="c9a29ac1-7840-4494-bd44-fcac71f91316" class="">Dune Messiah - Frank Herbert</p><p id="59b96847-c196-4f8a-8100-981ad8121b93" class="">The tipping point - Malcolm Gladwell</p><p id="7e757c88-dd31-4f62-ba3e-2d385fd29d86" class="">Less - Andrew Sean Greer</p><p id="4910e8ae-69b2-4bf6-a4cd-8399587bdb98" class=""><strong>November</strong></p><p id="055c51e9-75a3-4cf1-8956-3ce2e9e8d66a" class="">Furiously happy - Jenny Lawson</p><p id="7e96c50f-9ff1-4e2c-825a-44e64d4a8b96" class="">Tenet screen play - Christopher Nolan</p><p id="d0fb7b85-4f51-4efe-af54-a59a2bbb49a6" class="">Children of Dune - Frank Herbert</p><p id="5f86c69e-7d5f-4a85-ae9b-f92640d12f99" class="">Foundation - Isaac Asimov</p><p id="276cc717-3d9e-4b67-92e7-c16ba2614a51" class=""><strong>December</strong></p><p id="0b7f61b9-15e5-404d-bf2d-2c678ea6e586" class="">The Prose Edda - Snorri Sturluson</p><p id="14bb4c7d-d5cb-416c-87b1-32086d793d6d" class="">Thats it! December is a little light because I’ve started a lot of books this month and when I read a lot of books at the same time, it takes longer to finish them.  Also I started reading the Lord of the Rings finally because I have never managed to commit to it and its a huge undertaking for me haha. By the way this is quite a lot of books for me. It seems like the more I read, the more I am able to read. Like its a skill that I keep getting better at.</p><p id="2255181b-6606-4e6f-8d44-d67b420c562e" class="">I started creating these lists for myself last year as a way of remembering the books I’ve read. I couldn’t tell you how many books I don’t remember if I’ve read in the past because I never recorded anywhere that I read them. If I saw them on a bookshelf I might remember, but then again, I have no recollection of reading certain books, like Emma, did I read Emma? I think I might have, but I can’t be quite sure because I’ve seen clueless countless times and know the story of Emma already. When the Emma movie came out recently, I spent the entire movie trying to recall if I had actually read it or whether that was a fake memory. Yes I think I have read it but it’s nice to know for certain if I have.</p><p id="94d0442b-6d8b-4f03-8d19-6e4e3e43e3ec" class="">I want to mention my top books for the year and the things I have gained by reading this year. So to begin, I have read quite a bit more non fiction this year, and I have realised that I really enjoy reading non fiction books. I find that they get me thinking about ideas and concepts that I didn’t realise were floating around in my head, and I value that experience. I have discovered that I have a favourite non fiction writer and that is Malcolm Gladwell. I had never heard of him or his work until I watched his masterclass earlier in the year. I devoured his masterclass I should say, in only a couple of sittings, because I realised that I like the way he thinks and the way he approaches non fiction through problem solving. After watching his master class I have proceeded to read as many of his books as I can get my hands on, I am currently reading the fourth one for the year. His books are amazing at telling the story of the world as it is, in a way that has not been done before, and in a way that makes me seriously consider the inequality and injustice in the world (mostly the American world but it applies to us all). He understands privilege and opportunity in a way that many others don’t. He makes me want to approach non fiction in the same way as him. I’m also devouring his podcast Revisionist history. It’s safe to say I have become obsessed with his work.</p><p id="31496864-80ca-44ac-a4c4-372159449cd2" class="">I began a few scifi series, and delved into quite a few worlds that I really enjoyed. From more modern works, the Wayfarers series by Becky Chambers (starting with The long way to a small angry planet) and the Southern reach trilogy (starting with Annihilation) by Jeff Vandermeer were really really good quality sci fi series. I don’t know if you would exactly call Vandermeer’s series sci fi or speculative fiction, because it also has a strong focus on the literary prose that I really enjoyed immensely. I loved getting lost in the words that he weaved around me, and the world that was opening up with a sort of horror of the unknown style. Chambers wrote a wonderful sci fi series, three books so far but I think another is coming soon. Her series is wholesome and lovely which you might not expect from a sci fi series. But the reason I love this series so much is the fact that at its heart the story is not driven so much by conflict but by world building and interesting and respectful relationships between the characters and it makes me happy to read and not feel any sort of stress, having no fear that conflict will show up. Its just really nice and a well written world and there’s a reason this series has won the Hugo award.</p><p id="1b92978c-33b7-4812-8751-aab05ea7eeb3" class="">This year I also went back to some more classic sci fi series that I have never managed to read and yet they are such classics that I felt like I should actually attack them once and for all. So for those I am talking about Isaac Asimov’s Foundation series and Frank Herbert’s Dune series and oh boy, have I been missing out on some absolutely incredible sci fi stories? Yes, yes I have. My god, why didn’t I read these earlier? I got around to reading Dune because the new movie was supposed to come out this year (my biggest disappointment this year is that it hasn’t come out, I’m kidding, but man am I looking forward to this) and I wanted to experience the book before I saw the movie. Also its such an incredibly popular sci fi book so I had to read it at some point right? I am not just in love with these books, but I am in love with the obsession around Dune and what it has meant for the entire sci fi genre. First of all the world that Frank Herbert has created in Dune and the following books is truly incredible, beyond all belief. The underlying ideas of the flaws of a messiah and religious extremism are just so fascinating to think about and play around with (in a fictional setting), its hard not to be inspired by this. I’ve read the first three books this year and I intend to finish off reading the other 3 books were in the original story as told by Frank Herbert. His son and Kevin J Anderson also wrote a bunch more books but I don’t know if I will commit to those just yet. The story is so incredible but what I find equally incredible is the history of the attempts to make this thing into a movie, it has been an entirely intriguing process that I actually want to write an entire article on. I’ve cut 300 words from this article where I delve into it but I want to save that for another time, also it has more to do with my fascination with movie directors and less to do with the books and this article is all about the books so back to it.</p><p id="5af2319d-add7-4b17-9c77-50518cd2e189" class="">Upon reading this series, I was inspired to also start exploring another epic sci fi world that is Isaac Asimov’s Foundation series. So far I have only read the first one but it has been just so very stimulating that I desperately need to get back into it. I like the ideas here, and this book is the essence of what I like about sci fi, the ideas come before story and plot and character. Here we see an epic over a large period of time, only sort of delving into the character in so much that it leads to interesting dialogue and that’s all I need in sci fi. I’m really looking forward to seeing where the ideas go in this story and I actually feel so inspired by this book to write some sci fi short stories.</p><p id="7af22d57-9823-4154-b49e-fa988e63cf61" class="">Anyway let’s move on from sci fi to some general fiction highlights. I absolutely adored Call me by your name. I read the book by Andre Aciman and I watched the movie directed by Luca Guadagnino and I loved both of them, it was truly a lovely wholesome story that I didn’t know how much I needed in my life and honestly need more of in my life. One thing that I realised after hearing someone else say, was that the entire time I was watching the film, I was expecting something horrible to happen, there was this anxiety in the pit of my stomach that was never given reason to be there, and the reason for that anxiety comes from how Hollywood and cinema has portrayed LGBT+ characters in the past, often leading to tragedy and punishment for being LGBT+. I could get into that but actually its something that makes me very emotional so I won’t.</p><p id="ad296874-1446-4ad0-9fdc-dc8498f4f0ef" class="">It’s actually why I love this book and movie so much. The story that is told is a wholesome story about a teenage boy that finds tenderness and love with another man and tells an authentic story of what it feels like to be young and queer and to feel attraction to someone of the same sex. This story is beautiful. There is also a follow up book which is also apparently being made into a movie. I haven’t read the next book yet but its on my list of things I need to read.</p><p id="8cee4e2e-f622-4081-a8d2-e7ed3627c8b0" class="">I read a couple of books with LGBT+ representation this year, also with more diverse stories than I usually read, which is something I am personally working on. One of my favourites was Girl, woman, other, which tells the fictional story of several women of colour, some of them LGBT+, living in London and the thing I love so much about this story is how real it feels to me, how authentic the voice is in this book and how interesting the characters are, which is where the main focus of the book lies. I truly appreciate how well the author captures the personality of the women coming from poorer backgrounds in London, even as an Australian coming from a different country this is something that I can relate to and I find that so powerful.</p><p id="ba0377a0-0358-4a06-b15c-836b63b11949" class="">Another stand alone book that I want to mention as one of those that has had an impact on me is Kazuo Ishiguro’s An artist of the floating world which deals with the consequences of being a propaganda artist on the wrong side of history and the subtle ways in which this effects relationships and people. The ideas in this book are big ones that don’t appear very often in literature to my knowledge and they are ideas that I think could benefit from being explored more often. The prose is beautiful as well, I loved the words. It&#x27;s a short one but a powerful one.</p><p id="e003fb1b-a2ed-4f12-836c-a283ecefa025" class="">Another thing I have found out this year is that I absolutely adore Siri Hustvedt and everything she writes. I read three of her works, one non fiction (A woman looking at men looking at women) which was an intellectually stimulating and thought provoking look into a couple of topics that are captivating, for instance as the title suggests, the author delves into the subject of male artists that paint the female body and the author takes a feminine perspective in analysing these artists and their portrayal of women. I also read two fiction books that were just amazing novels with intellectual protagonists in the art and literature world that make me want to belong to that world. I’m currently reading another of her works, Memories of the future which is a blend of fiction and non fiction as she looks back in diaries from a distant time in her early twenties. I feel like I can identify with Hustvedt and I want to write like she writes. She has been a huge inspiration to me this year.</p><p id="2566314e-49e5-4add-929e-652ca698b944" class="">Lastly I want to briefly talk about the 7th and 8th books in the Expanse by James S A Corey. This series is one of my favourite sci fi series ever, I have loved it since I read the first book Leviathan wakes when it came out. I was doing my undergraduate degree in science at the time and totally geeked out with this series. The series is consistently amazing, I love every book that comes out and its really ramping up to something amazing. The next book will be the final book and I’m quite sad that it will end but also ecstatic to see how they will end it, there are some really interesting ideas in this sci fi epic with ancient alien beings and story arcs that span the entire series and the characters are some of the most interesting I have read in a series. The latest one (Tiamat’s wrath) is definitely an awesome read, I enjoyed every little bit of it and really I have nothing but praise for it, I could go on and on. Also I am very happy that the latest season of the tv show has finally started to air and this is a show well done and true to the epic feel of this space opera.</p><p id="fc6214bf-eb73-440f-bf93-205b543c00a3" class="">Now that I have talked a bit about a few of my favourites for the year, perhaps its obvious what my top picks are. I couldn’t really pick my top 5, because there are quite a few books that I really loved but I could maybe pick a top 10 in no particular order and including any series as one thing altogether:</p><p id="3a558e9e-45fd-4f70-87dd-69a79bde7f85" class="">Call me by your name - Andre Aciman</p><p id="877d7df8-2cb3-4047-942a-7d9230e183f6" class="">The Southern reach trilogy - Jeff Vandermeer</p><p id="66990dda-f9ee-48b7-9ae4-13afefc9a646" class="">The wayfarers series - Becky Chambers</p><p id="80920d98-80e6-499b-b171-8a02666ac0c2" class="">Tiamat’s wrath - James S A Corey</p><p id="437c765b-2046-4bc8-adc9-f61976a252b8" class="">Talking to strangers - Malcolm Gladwell</p><p id="5c27440c-6e21-4d1b-9140-350680fb48b6" class="">Dune - Frank Herbert</p><p id="d8a879e9-ca65-415f-9d26-0c4ad1bcedca" class="">Foundation - Isaac Asimov</p><p id="66f6d5d2-83a4-4998-a715-843c9721d219" class="">An artist of the floating world - Kazuo Ishiguro</p><p id="e12a676a-0375-4fe1-99a0-07e13e1bd551" class="">Girl, Woman, Other - Bernadine Evaristo</p><p id="1d1ef914-f673-454b-875d-bff88057f353" class="">What I loved - Siri Hustvedt</p><p id="8bf420cd-6212-4ed4-aa3c-63eb5801da1f" class="">I also want to mention a book that I did not read but tried to pick up this year and have decided I will never read (as harsh as a judgement as that is, I have no time for this) and that’s the first book in the Dresden files (Storm front) by Jim Butcher. I hated the main character and I only read three chapters. A solid no from me on getting into this series. I’m not even going to give him a chance because the main character seemed annoying and possibly sexist immediately into the first few pages so nope, I’m out on that one. Its just not for me, and not to my taste.</p><p id="a9543ba6-f3a5-4d01-b92c-c15fcc5ed271" class="">So that’s been my year of reading. I am so thankful for the escape that books have provided me this year. And I have quite the TBR list for next year already so I really hope I can keep up the reading next year. I find that it gets easier to read the more I do it, as so often goes. But I have also noticed that I am a lot better at reading now that I have finished my PhD. I would maybe get through a couple books in a year during my PhD if I was lucky and I think I really had to switch that part of my brain off, kind of like how I suppressed a lot of myself in order to get through a PhD. Anyway this article is long enough as it is so I will end it there. I hope I can publish more in the future. See you in the new year somewhere!</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
