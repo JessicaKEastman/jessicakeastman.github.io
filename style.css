@@ -197,21 +197,21 @@ background-size: cover;
 }
 
 .about img {
-  width: 45%;
+  width: 35%;
   justify-self: end;
   border-radius: 9px;
 }
 
 .about p {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
 }
 
 .text {
-  max-width: 35rem;
+  max-width: 50rem;
 /*  background-color: #e7ac21;*/
   background-color: #e9be5a;
   padding: 9rem 5rem;
-  margin-left: -5rem;
+  margin-left: -1rem;
   border-radius: 9px;
 }
 
